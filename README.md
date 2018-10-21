@@ -8,7 +8,8 @@ Enclosed in this README file are instructions needed to create and configure a l
 
 ## Server Configuration Instructions:
 ### 1. Create Server Instance
-First, make an [AWS account](https://aws.amazon.com/) and create an AWS Lightsail instance
+First, make an [AWS account](https://aws.amazon.com/) and create an AWS Lightsail instance.
+
 Choose the following configuration options:
 Instance image:
 * Linux/Unix
