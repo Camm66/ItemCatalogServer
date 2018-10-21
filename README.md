@@ -220,3 +220,9 @@ Initialize the database
 * `sudo service apache2 restart`
 
 Then visit the [URL](cameronmoralesweb.com) provided above.
+
+## Third Party Resources
+* [profitbricks.com](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/) Deploy a Flask Application on Ubuntu
+* 
+* 
+
