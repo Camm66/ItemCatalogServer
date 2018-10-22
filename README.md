@@ -222,7 +222,7 @@ Initialize the database
 Then visit the [URL](cameronmoralesweb.com) provided above.
 
 ## Third Party Resources
-* [profitbricks.com](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/) Deploy a Flask Application on Ubuntu
-* 
-* 
+* [Deploy a Flask Application on Ubuntu](https://devops.profitbricks.com/tutorials/deploy-a-flask-application-on-ubuntu-1404/)
+* [How To Use SSH to Connect to a Remote Server in Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu)
+* [PostgreSQL command line cheatsheet](https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546)
 
