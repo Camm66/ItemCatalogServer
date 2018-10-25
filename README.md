@@ -76,7 +76,7 @@ Check for upgrades
 * `sudo apt-get upgrade`
 ### 5. Configure time zone
 Change time zone to __UTC__
-* `Run sudo dpkg-reconfigure tzdata`
+* `sudo dpkg-reconfigure tzdata`
 ### 6. Install Apache2
 Install apache
 * `sudo apt-get install apache2` 
@@ -91,10 +91,10 @@ In __/var/www__ create catalog directory
 * `sudo mkdir catalog`
 
 Grant permissions 
-* `sudo chmod catalog`
+* `sudo chmod go+rwx catalog`
 
 In __/var/www__ clone the repository
-* `git clone https://github.com/aaayumi/item-catalog-udacity.git`
+* `git clone https://github.com/camm66/Item-Catalog-Web-App.git`
 ### 9. Create WSGI file
 Install the mod-wsgi module
 * `sudo apt-get install python-setuptools libapache2-mod-wsgi`
