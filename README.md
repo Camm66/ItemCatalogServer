@@ -149,7 +149,7 @@ Enter the following:
 <VirtualHost *:80>
                 ServerName http://cameronmoralesweb.com
                 ServerAdmin ubuntu@34.207.18.26
-                WSGIScriptAlias / /var/www/catalog/flaskapp.wsgi
+                WSGIScriptAlias / /var/www/catalog/catalog.wsgi
                 <Directory /var/www/catalog>
                         Order allow,deny
                         Allow from all
@@ -163,8 +163,8 @@ Enter the following:
                         Order allow,deny
                         Allow from all
                 </Directory>
-                Alias /images /var/www/catalog/catalog/static/images
-                <Directory /var/www/catalog/catalog/static/images>
+                Alias /images /var/www/catalog/catalog/images
+                <Directory /var/www/catalog/catalog/images>
                         Order allow,deny
                         Allow from all
                 </Directory>
@@ -191,27 +191,27 @@ Login to postgres
 * `psql`
 
 Create User
-* `CREATE USER catalog WITH PASSWORD 'secretpassword'`
+* `CREATE USER catalog WITH PASSWORD 'secretpassword';`
 
 Create database 'catalog'
-* `ALTER USER catalog CREATEDB` 
-* `CREATE DATABASE catalog WITH OWNER catalog`
+* `ALTER USER catalog CREATEDB;` 
+* `CREATE DATABASE catalog WITH OWNER catalog;`
 
 Connect to the database 
 * `\c catalog`
 
 Revoke all rights 
-* `REVOKE ALL ON SCHEMA public FROM public`
+* `REVOKE ALL ON SCHEMA public FROM public;`
 
 Grant rights to catalog 
-* `GRANT ALL ON SCHEMA public TO catalog`
+* `GRANT ALL ON SCHEMA public TO catalog;`
 
 Logout and exit postgres
 * `\q` 
 * `exit`
 
 Adjust database engine in the Flask Application (`__init__.py`, `database_setup.py`):
-* `engine = create_engine('postgresql://catalog:password@localhost/catalog')`
+* `engine = create_engine('postgresql://catalog:secretpassword@localhost/catalog')`
 
 Initialize the database
  * `python database_setup.py`
