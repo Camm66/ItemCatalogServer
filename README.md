@@ -125,7 +125,7 @@ Install Flask
 * `pip install Flask`
 
 Install Additional Dependencies
-* `pip install bleach httplib2 request oauth2client sqlalchemy python-psycopg2`
+* `pip install flask flask_wtf httplib2 requests oauth2client sqlalchemy python-psycopg2`
 ### 11. Install Virtual Environment
 Install venv
 * `sudo apt-get install python-virtualenv`
