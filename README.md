@@ -134,7 +134,7 @@ Create new environment
 * `sudo virtualenv venv`
 
 Activate environment
-* `source venv/bin/activate
+* `source venv/bin/activate`
 
 Grant permissions
 * `sudo chmod -R 777 venv`
