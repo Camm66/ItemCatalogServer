@@ -181,7 +181,7 @@ Enter the following:
 
 ### 13. Configure PostgreSQL
 Install Postgres
-  * `sudo apt-get install PostgreSQL`
+  * `sudo apt-get install postgresql`
  
 No remote connections are allowed
 * `sudo vim /etc/postgresql/9.3/main/pg_hba.conf`
