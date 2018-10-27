@@ -33,6 +33,21 @@ Now log into the server:
 Change SSH port from 22 to 2200
 * `sudo nano /etc/ssh/sshd_config`
 
+** ``` # What ports, IPs and protocols we listen for
+         Port 2200
+```
+
+Enforce key-bases authentication
+* `sudo nano /etc/ssh/sshd_confid
+
+** `PasswordAuthentication no`
+
+Disable ssh login for root user
+* `sudo nano /etc/ssh/sshd_confid
+
+** `PermitRootLogin no`
+
+
 Save and restart SSH
 * `sudo service ssh restart`
 
