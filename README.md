@@ -238,29 +238,30 @@ Grant user git presmissions from directory __/var/www/catalog__
 * `sudo chown -R grader:grader catalog`
 
 Grant user sudo permission
+
 1. Create a new sudoer directory
-* `sudo nano /etc/sudoers.d/grader`
+     * `sudo nano /etc/sudoers.d/grader`
 
 2. Add the following:
-* `grader ALL=(ALL:ALL) ALL`
+     * `grader ALL=(ALL:ALL) ALL`
 
 Create user ssh key
-1. Generate key pair on your local machine:
-* `ssh-keygen`
 
-2. On the server
-Switch to the user:
-* `su - grader`
+3. Generate key pair on your local machine:
+     * `ssh-keygen`
 
-Create the key directory:
-* `mkdir .ssh`
-* `touch .ssh/authorized_keys`
+4. (On server) switch to the user:
+     * `su - grader`
 
-Copy the users public key and paste it here:
-* `sudo nano .ssh/authorized_keys`
+5. Create the key directory:
+     * `mkdir .ssh`
+     * `touch .ssh/authorized_keys`
 
-Reload ssh:
-* `service ssh restart`
+6. Copy the users public key and paste it here:
+     * `sudo nano .ssh/authorized_keys`
+
+7. Reload ssh:
+     * `service ssh restart`
 
 ### 15. Restart Apache
 * `sudo service apache2 restart`
