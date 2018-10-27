@@ -32,20 +32,15 @@ Now log into the server:
 
 Change SSH port from 22 to 2200
 * `sudo nano /etc/ssh/sshd_config`
-
-** ``` # What ports, IPs and protocols we listen for
-         Port 2200
-```
+* `Port 2200`
 
 Enforce key-bases authentication
-* `sudo nano /etc/ssh/sshd_confid
-
-** `PasswordAuthentication no`
+* `sudo nano /etc/ssh/sshd_config`
+* `PasswordAuthentication no`
 
 Disable ssh login for root user
-* `sudo nano /etc/ssh/sshd_confid
-
-** `PermitRootLogin no`
+* `sudo nano /etc/ssh/sshd_config`
+* `PermitRootLogin no`
 
 
 Save and restart SSH
@@ -105,11 +100,14 @@ Install Git
 In __/var/www__ create catalog directory
 * `sudo mkdir catalog`
 
-Grant permissions 
-* `sudo chmod go+rwx catalog`
-
 In __/var/www__ clone the repository
 * `git clone https://github.com/camm66/Item-Catalog-Web-App.git`
+
+Set git email and name
+ * `git config --global user.email "you@example.com"`
+ 
+ * `git config --global user.name "Your Name"`
+
 ### 9. Create WSGI file
 Install the mod-wsgi module
 * `sudo apt-get install python-setuptools libapache2-mod-wsgi`
@@ -153,6 +151,7 @@ Activate environment
 
 Grant permissions
 * `sudo chmod -R 777 venv`
+
 ### 12. Configure Apache2
 Create an apache2 .config file 
 
@@ -230,8 +229,40 @@ Adjust database engine in the Flask Application (`__init__.py`, `database_setup.
 
 Initialize the database
  * `python database_setup.py`
+ 
+### 14. Create New User
+Create a user called grader
+* `sudo adduser grader`
 
-### 14. Restart Apache
+Grant user git presmissions from directory __/var/www/catalog__
+* `sudo chown -R grader:grader catalog`
+
+Grant user sudo permission
+1. Create a new sudoer directory
+* `sudo nano /etc/sudoers.d/grader`
+
+2. Add the following:
+* `grader ALL=(ALL:ALL) ALL`
+
+Create user ssh key
+1. Generate key pair on your local machine:
+* `ssh-keygen`
+
+2. On the server
+Switch to the user:
+* `su - grader`
+
+Create the key directory:
+* `mkdir .ssh`
+* `touch .ssh/authorized_keys`
+
+Copy the users public key and paste it here:
+* `sudo nano .ssh/authorized_keys`
+
+Reload ssh:
+* `service ssh restart`
+
+### 15. Restart Apache
 * `sudo service apache2 restart`
 
 Then visit the [URL](cameronmoralesweb.com) provided above.
