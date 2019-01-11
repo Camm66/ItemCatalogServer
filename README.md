@@ -28,7 +28,7 @@ Rename the file
 Store the file in your ~/.ssh directory
 
 Now log into the server:
-* `ssh -i lightsailServerKey.pem ubuntu@34.207.18.26`
+* `ssh -i ~/.ssh/lightsailServerKey.pem ubuntu@34.207.18.26`
 
 Change SSH port from 22 to 2200
 * `sudo nano /etc/ssh/sshd_config`
