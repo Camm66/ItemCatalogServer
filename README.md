@@ -2,7 +2,7 @@
 Enclosed in this README file are instructions needed to create and configure a linux server that will deploy the [Item-Catalog-Web-App](https://github.com/Camm66/Item-Catalog-Web-App).
 
 ## Location:
-* IP Address: `34.207.18.26`
+* IP Address: `100.25.235.41`
 * SSH port: `2200`
 * URL: http://cameronmoralesweb.com/
 
